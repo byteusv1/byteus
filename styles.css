@@ -12,17 +12,17 @@ body {
   width: 300px;
   height: 300px;
   background-color: #333;
-  border: 4px solid #9ff;
+  border: 4px solid #7fff00;
   border-radius: 20px;
-  box-shadow: 0 0 20px #9ff, 0 0 40px #9ff, 0 0 60px #9ff;
+  box-shadow: 0 0 20px #7fff00, 0 0 40px #7fff00, 0 0 60px #7fff00;
   animation: glow 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 10px #9ff, 0 0 20px #9ff, 0 0 30px #9ff;
+    box-shadow: 0 0 10px #7fff00, 0 0 20px #7fff00, 0 0 30px #7fff00;
   }
   to {
-    box-shadow: 0 0 30px #9ff, 0 0 60px #9ff, 0 0 90px #9ff;
+    box-shadow: 0 0 30px #7fff00, 0 0 60px #7fff00, 0 0 90px #7fff00;
   }
 }
