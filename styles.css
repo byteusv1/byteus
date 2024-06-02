@@ -82,14 +82,25 @@ nav a:hover {
   transition: transform 1s ease;
 }
 
+.discord-button {
+  display: inline-block;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transitions */
+}
+
 .discord-button img {
-  width: 60px;
+  width: 40px;
   height: auto;
   border-radius: 10px;
 }
 
-.discord-button:hover img {
-  box-shadow: 0 0 10px #7fff00, 0 0 20px #7fff00, 0 0 40px #7fff00;
+.discord-button:hover {
+  transform: scale(1.1); /* Grow the button */
+  box-shadow: 0 0 20px #7fff00, 0 0 40px #7fff00, 0 0 60px #7fff00; /* Increase glow */
+  background-color: rgba(0, 255, 0, 0.2); /* Optional background change */
 }
 
 @keyframes glow {
