@@ -20,6 +20,7 @@ nav {
   top: 0;
   left: 0;
   z-index: 2; /* Ensures the nav is above other elements */
+  padding: 20px 0; /* Add padding to the top and bottom */
 }
 
 nav ul {
@@ -62,7 +63,7 @@ nav a:hover {
   color: #fff;
   padding-top: 20px;
   z-index: 1; /* Ensure the box is below the nav */
-  margin-top: 50px; /* Adjust if needed to avoid overlap with nav */
+  margin-top: 100px; /* Adjust if needed to avoid overlap with nav */
 }
 
 .box h1 {
