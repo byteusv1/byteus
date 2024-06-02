@@ -19,8 +19,8 @@ nav {
   top: 20px; /* Adjust distance from the top of the screen */
   z-index: 2; /* Ensures the nav is above other elements */
   padding: 10px 20px; /* Add padding around the nav buttons */
-  border-radius: 10px; /* Optional: adds rounded corners to the nav bar */
-  box-shadow: 0 0 20px 5px #fff; /* Neon white border effect */
+  border: 4px solid #fbffff;
+  border-radius: 20px;
 }
 
 nav ul {
