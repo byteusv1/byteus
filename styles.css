@@ -19,10 +19,12 @@ body {
   animation: glow 1.5s ease-in-out infinite alternate;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Changes justify-content to top */
   align-items: center;
   text-align: center;
   color: #fff;
+  position: relative;
+  padding-top: 20px
 }
 
 .box h1 {
