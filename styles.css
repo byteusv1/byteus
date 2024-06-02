@@ -38,14 +38,14 @@ nav a {
   display: block;
   padding: 10px 20px;
   text-decoration: none;
-  color: #fff; /* Set text color to white */
+  color: #fbffff; /* Set text color to white */
   border-radius: 5px;
   transition: border-color 0.3s ease; /* Add transition for border color */
   border: 2px solid transparent; /* Initially, set border to transparent */
 }
 
 nav a:hover {
-  border-color: #fff; /* Change border color on hover */
+  border-color: #fbffff; /* Change border color on hover */
 }
 
 .box {
