@@ -34,17 +34,20 @@ body {
 
 .discord-button {
   display: inline-block;
-  background-color: #7289da;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: transparent; /* Remove the background color */
+  padding: 0; /* Remove the padding */
+  border: none; /* Remove the border */
   margin-top: 20px;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease; /* Add a transform transition */
+}
+
+.discord-button img {
+  width: 40px; /* Adjust the size of the icon as needed */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .discord-button:hover {
-  background-color: #677bc4;
+  transform: scale(1.2); /* Scale up the icon on hover */
 }
 
 @keyframes glow {
