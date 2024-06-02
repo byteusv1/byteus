@@ -47,8 +47,8 @@ body {
   border-radius: 10px; /* Adjust this value for corner roundness */
 }
 
-.discord-button:hover {
-  transform: scale(1.2); /* Scale up the icon on hover */
+.discord-button:hover img {
+  box-shadow: 0 0 10px #7fff00, 0 0 20px #7fff00, 0 0 40px #7fff00;
 }
 
 @keyframes glow {
