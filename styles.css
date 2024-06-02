@@ -5,73 +5,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   font-family: Arial, sans-serif;
+  position: relative; /* Added to position elements absolutely */
 }
 
-.box {
-  width: 500px;
-  height: 600px;
-  background-color: #808080;
-  border: 4px solid #c4feb9;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #c4feb9, 0 0 40px #c4feb9, 0 0 60px #c4feb9;
-  animation: glow 1.5s ease-in-out infinite alternate;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Changes justify-content to top */
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
-  padding-top: 20px
-}
-
-.box h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-.discord-button {
-  display: inline-block;
-  background-color: transparent; /* Remove the background color */
-  padding: 0; /* Remove the padding */
-  border: none; /* Remove the border */
-  margin-top: 20px;
-  transition: transform 0.3s ease; /* Add a transform transition */
-}
-
-.discord-button img {
-  width: 40px;
-  height: auto;
-  border-radius: 10px; /* Adjust this value for corner roundness */
-}
-
-.discord-button:hover img {
-  box-shadow: 0 0 10px #7fff00, 0 0 20px #7fff00, 0 0 40px #7fff00;
-}
-
-@keyframes glow {
-  from {
-    box-shadow: 0 0 10px #c4feb9;
-  }
-  to {
-    box-shadow: 0 0 30px #c4feb9;
-  }
-}
-
-canvas {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-}
 nav {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Ensures the nav is above other elements */
 }
 
 nav ul {
@@ -96,4 +44,63 @@ nav a {
 
 nav a:hover {
   box-shadow: 0 0 10px #7fff00, 0 0 20px #7fff00, 0 0 30px #7fff00;
+}
+
+.box {
+  width: 500px;
+  height: 600px;
+  background-color: #808080;
+  border: 4px solid #c4feb9;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #c4feb9, 0 0 40px #c4feb9, 0 0 60px #c4feb9;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding-top: 20px;
+  z-index: 1; /* Ensure the box is below the nav */
+  margin-top: 50px; /* Adjust if needed to avoid overlap with nav */
+}
+
+.box h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.discord-button {
+  display: inline-block;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.discord-button img {
+  width: 40px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.discord-button:hover img {
+  box-shadow: 0 0 10px #7fff00, 0 0 20px #7fff00, 0 0 40px #7fff00;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #c4feb9;
+  }
+  to {
+    box-shadow: 0 0 30px #c4feb9;
+  }
+}
+
+canvas {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
 }
