@@ -39,6 +39,7 @@
 			border: none;
 			border-radius: 5px;
 			cursor: pointer;
+			text-decoration: none;
 		}
 		
 		.download-button:hover {
@@ -70,23 +71,12 @@
 		</div>
 		
 		<div class="download-button-container">
-			<button class="download-button">Download</button>
+			<a href="https://example.com/download" class="download-button" target="_blank">Download</a>
 		</div>
 		
 		<iframe class="video-iframe" width="640" height="480" src="https://www.youtube.com/embed/yVuIKlWkGcM?si=D92hgMH4_qnDl0YP" frameborder="0" allowfullscreen></iframe>
 		
 		<a class="download-link" href="#" id="download-link">Download</a>
 	</div>
-	
-	<script>
-		// Add an event listener to the download button
-		document.querySelector('.download-button').addEventListener('click', function() {
-			// Get the download link and make it visible
-			var downloadLink = document.getElementById('download-link');
-			downloadLink.href = 'https://example.com/test';
-			downloadLink.style.display = 'block';
-		});
-	</script>
 </body>
 </html>
-		
