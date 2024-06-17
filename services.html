@@ -5,30 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meta Quest Mods</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Additional styles for the m0ds page */
-    .service-item {
-      display: inline-block;
-      margin: 20px;
-      border: 2px solid #39ff14;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-item img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .service-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
-    }
-  </style>
 </head>
 <body>
   <div id="particles-js"></div>
@@ -39,7 +15,7 @@
         <div class="neon-box-nav">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="https://discord.gg/byteus" target="_blank">Discord</a></li>
+            <li><a href="https://discord.gg/byteus" target="_blank" rel="noopener noreferrer">Discord</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
         </div>
@@ -47,13 +23,16 @@
     </header>
     <main>
       <div class="service-item" onclick="location.href='https://drive.filen.io/d/90274d16-e08f-4c59-a754-ebd6f601dab2#Wncu5KYk9SMDDFm8SwIad3ADAuCeJQkp';">
-        <img src="pics/download.webp" alt="Service 1">
+        <img src="pics/download.webp" alt="Download mod 1">
+        <div class="info">Temp Desc.</div>
       </div>
       <div class="service-item" onclick="location.href='https://www.mediafire.com/file/7mmgrhmv7zww3nj/Fruit_Ninja_VR-ByteUs_Mod.apk/file';">
-        <img src="pics/download.jpeg" alt="Service 2">
+        <img src="pics/download.jpeg" alt="Download mod 2">
+        <div class="info">Temp Desc.</div>
       </div>
       <div class="service-item" onclick="location.href='https://www.mediafire.com/file/ioqzfy8t2trixck/Walkabout_Minigolf-ByteUs_Mod.apk/file';">
-        <img src="pics/download (1).jpeg" alt="Service 3">
+        <img src="pics/download (1).jpeg" alt="Download mod 3">
+        <div class="info">Temp Desc.</div>
       </div>
     </main>
   </div>
@@ -61,4 +40,3 @@
   <script src="app.js" defer></script>
 </body>
 </html>
-
