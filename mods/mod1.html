@@ -1,1 +1,84 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+		}
+		
+		.container {
+			max-width: 800px;
+			margin: 40px auto;
+			padding: 20px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.info {
+			margin-bottom: 20px;
+		}
+		
+		.info h2 {
+			margin-top: 0;
+		}
+		
+		.download-button {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.download-button:hover {
+			background-color: #3e8e41;
+		}
+		
+		.video-iframe {
+			margin-top: 20px;
+			border: none;
+		}
+		
+		.download-link {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="info">
+			<h2>Mod Information</h2>
+			<p>This is a sample video.</p>
+			<p>Video Title: Sample Video</p>
+			<p>Description: This is a sample</p>
+		</div>
+		
+		<button class="download-button">Download</button>
+		
+		<iframe class="video-iframe" width="640" height="480" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+		
+		<a class="download-link" href="#" id="download-link">Download</a>
+	</div>
+	
+	<script>
+		// Add an event listener to the download button
+		document.querySelector('.download-button').addEventListener('click', function() {
+			// Get the download link and make it visible
+			var downloadLink = document.getElementById('download-link');
+			downloadLink.href = 'https://example.com/video.mp4';
+			downloadLink.style.display = 'block';
+		});
+	</script>
+</body>
+</html>
