@@ -70,21 +70,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #39ff14; /* Change color to neon pink on hover */
-  text-shadow: 0 0 10px #39ff14, 0 0 20px #, 0 0 30px #39ff14, 0 0 40px #39ff14; /* Neon glow effect on hover */
+  color: #39ff14; /* Change color to neon green on hover */
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #39ff14; /* Neon glow effect on hover */
 }
-
 
 main {
   text-align: center;
   margin-top: 150px; /* Adjust the margin-top value as needed */
 }
 
-  h2 {
+h2 {
   color: #ffffff; /* White text color */
   text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff; /* Neon white glow */
 }
-
 
 p {
   font-size: 18px;
@@ -94,18 +92,18 @@ p {
 
 /* Neon Box Styling */
 .neon-box {
-  background-color: rgba(0, 0, 0, 1.0); /* Neon Pink with 20% opacity */
+  background-color: rgba(0, 0, 0, 1.0); /* Black background */
   border: 2px solid #ffffff; /* White border */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 0 30px #39ff14, 0 0 60px #39ff14;
-
   padding: 20px;
   margin: 0 auto;
   max-width: 600px; /* Adjust as needed */
 }
+
 /* Neon Box Nav Styling */
 .neon-box-nav {
-  background-color: rgba(0, 0, 0, 0.2); /* Neon Pink with 20% opacity */
+  background-color: rgba(0, 0, 0, 0.2); /* Black background with 20% opacity */
   border: 2px solid #ffffff; /* White border */
   border-radius: 10px; /* Rounded corners */
   padding: 10px 20px;
@@ -114,7 +112,6 @@ p {
 }
 
 /* Additional styles for the services page */
-
 .service-item {
   display: inline-block;
   margin: 20px;
@@ -133,8 +130,25 @@ p {
   height: auto;
 }
 
+.service-item .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #39ff14;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.service-item:hover .info {
+  opacity: 1;
+}
+
 .service-item:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
 }
-
