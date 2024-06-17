@@ -3,25 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mod Details</title>
+  <title>Meta Quest Mods</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="particles-js"></div>
   <div class="content">
     <header>
-      <h1>No More rainbows</h1>
-      <nav>
-        <a href="index.html">Back to Home</a>
+      <h1>ByteUs</h1>
+      <nav aria-label="Main Navigation">
+        <div class="neon-box-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://discord.gg/byteus" target="_blank" rel="noopener noreferrer">Discord</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
-      <div class="mod-info">
-        <h2>No More rainbows</h2>
-        <p>temp desc</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <a href="DOWNLOAD_URL" target="_blank" rel="noopener noreferrer">Download No More Rainbows</a>
+      <div class="mod-item">
+        <img src="pics/download.webp" alt="Download mod 1">
+        <div class="info">
+          <h2>Mod Name 1</h2>
+          <p>Mod description goes here...</p>
+          <a href="mod1.html" class="download-btn">View Details</a>
+        </div>
+      </div>
+      <div class="mod-item">
+        <img src="pics/download.jpeg" alt="Download mod 2">
+        <div class="info">
+          <h2>Mod Name 2</h2>
+          <p>Mod description goes here...</p>
+          <a href="mod2.html" class="download-btn">View Details</a>
+        </div>
+      </div>
+      <div class="mod-item">
+        <img src="pics/download (1).jpeg" alt="Download mod 3">
+        <div class="info">
+          <h2>Mod Name 3</h2>
+          <p>Mod description goes here...</p>
+          <a href="mod3.html" class="download-btn">View Details</a>
+        </div>
       </div>
     </main>
   </div>
+  <script src="particles.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
