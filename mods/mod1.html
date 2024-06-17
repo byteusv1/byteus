@@ -11,17 +11,19 @@
 		
 		body {
 			font-family: Arial, sans-serif;
-			background-color: #f7f7f7;
+			background-color: #000000; /* Black background */
+			color: #ffffff; /* White text */
 		}
 		
 		.container {
 			max-width: 800px;
 			margin: 40px auto;
 			padding: 20px;
-			background-color: #fff;
+			background-color: #000000; /* Black container */
 			border: 5px solid #39ff14;
 			border-radius: 10px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			text-align: center; /* Center container content */
 		}
 		
 		.info {
@@ -47,8 +49,9 @@
 		}
 		
 		.video-iframe {
-			margin-top: 20px;
+			margin: 20px auto; /* Center the iframe */
 			border: none;
+			display: block; /* Needed to center the iframe */
 		}
 		
 		.download-link {
@@ -56,7 +59,6 @@
 		}
 		
 		.download-button-container {
-			text-align: center;
 			margin-top: 20px;
 		}
 	</style>
@@ -78,5 +80,7 @@
 		
 		<a class="download-link" href="#" id="download-link">Download</a>
 	</div>
+
+	<script src="particles.js"></script>
 </body>
 </html>
