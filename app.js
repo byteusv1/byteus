@@ -1,6 +1,5 @@
-particlesJS('particles-js',
-
-    {
+document.addEventListener('DOMContentLoaded', () => {
+    particlesJS('particles-js', {
         "particles": {
             "number": {
                 "value": 30,
@@ -10,7 +9,7 @@ particlesJS('particles-js',
                 }
             },
             "color": {
-                "value": "#39ff14"
+                "value": "#ffffff"
             },
             "shape": {
                 "type": "circle",
@@ -28,7 +27,7 @@ particlesJS('particles-js',
                 }
             },
             "opacity": {
-                "value": 1,
+                "value": 0.5,
                 "random": false,
                 "anim": {
                     "enable": false,
@@ -38,7 +37,7 @@ particlesJS('particles-js',
                 }
             },
             "size": {
-                "value": 2.5,
+                "value": 3,
                 "random": true,
                 "anim": {
                     "enable": false,
@@ -56,7 +55,7 @@ particlesJS('particles-js',
             },
             "move": {
                 "enable": true,
-                "speed": 9,
+                "speed": 6,
                 "direction": "none",
                 "random": false,
                 "straight": false,
@@ -90,13 +89,14 @@ particlesJS('particles-js',
                 },
                 "bubble": {
                     "distance": 400,
-                    "size": 40,
+                    "size": 20,
                     "duration": 2,
                     "opacity": 8,
                     "speed": 3
                 },
                 "repulse": {
-                    "distance": 100
+                    "distance": 50,
+                    "duration": 0.4
                 },
                 "push": {
                     "particles_nb": 4
@@ -106,15 +106,6 @@ particlesJS('particles-js',
                 }
             }
         },
-        "retina_detect": true,
-        "config_demo": {
-            "hide_card": false,
-            "background_color": "#b61924",
-            "background_image": "",
-            "background_position": "50% 50%",
-            "background_repeat": "no-repeat",
-            "background_size": "cover"
-        }
-    }
-
-);
+        "retina_detect": true
+    });
+});
