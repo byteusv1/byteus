@@ -13,6 +13,7 @@
 			font-family: Arial, sans-serif;
 			background-color: #000000; /* Black background */
 			color: #ffffff; /* White text */
+			position: relative;
 		}
 		
 		.container {
@@ -24,8 +25,8 @@
 			border-radius: 10px;
 			box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
 			text-align: center; /* Center container content */
-			position: relative; /* Add this line */
-			z-index: 1; /* Add this line */
+			position: relative;
+			z-index: 1;
 		}
 		
 		#particles-js {
@@ -41,7 +42,7 @@
 		.info {
 			margin-bottom: 20px;
 			position: relative;
-			z-index: 1; /* Ensure content is above particles */
+			z-index: 2; /* Ensure content is above particles */
 		}
 		
 		.info h2 {
@@ -58,7 +59,7 @@
 			text-decoration: none;
 			transition: background-color 0.3s;
 			position: relative;
-			z-index: 1; /* Ensure button is above particles */
+			z-index: 2; /* Ensure button is above particles */
 		}
 		
 		.download-button:hover {
@@ -70,7 +71,7 @@
 			border: none;
 			display: block; /* Needed to center the iframe */
 			position: relative;
-			z-index: 1; /* Ensure iframe is above particles */
+			z-index: 2; /* Ensure iframe is above particles */
 		}
 		
 		.download-link {
@@ -80,7 +81,7 @@
 		.download-button-container {
 			margin-top: 20px;
 			position: relative;
-			z-index: 1; /* Ensure button container is above particles */
+			z-index: 2; /* Ensure button container is above particles */
 		}
 	</style>
 </head>
@@ -103,8 +104,8 @@
 		<a class="download-link" href="#" id="download-link">Download</a>
 	</div>
 
-	<script src="path/to/particles.js"></script>
-	<script src="path/to/app.js"></script>
+	<script src="particles.js"></script>
+	<script src="app.js"></script>
 	<script>
 		particlesJS("particles-js", {
 			"particles": {
