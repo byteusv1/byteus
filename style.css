@@ -77,6 +77,25 @@ nav ul li a:focus {
   outline: 2px solid #39ff14; /* Focus outline for accessibility */
 }
 
+.search-bar-container {
+  text-align: center; /* Center the search bar horizontally */
+  margin: 20px 0; /* Add vertical margin */
+}
+
+#searchBar {
+  width: 300px; /* Width of the search bar */
+  padding: 10px;
+  border: 2px solid #ffffff; /* White border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #000; /* Black background */
+  color: #00ff66; /* Neon green text color */
+  font-size: 16px;
+}
+
+#searchBar::placeholder {
+  color: #39ff14; /* Neon green placeholder color */
+}
+
 main {
   text-align: center;
   margin-top: 150px; /* Adjust the margin-top value as needed */
@@ -137,20 +156,3 @@ h2, p {
   transform: scale(1.05);
   box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
 }
-
-/* Search Bar Styling */
-#searchBar {
-  width: 200px;
-  padding: 8px;
-  margin: 10px;
-  border: 2px solid #ffffff; /* White border */
-  border-radius: 10px; /* Rounded corners */
-  background-color: #000; /* Black background */
-  color: #00ff66; /* Neon green text color */
-  font-size: 16px;
-}
-
-#searchBar::placeholder {
-  color: #39ff14; /* Neon green placeholder color */
-}
-
