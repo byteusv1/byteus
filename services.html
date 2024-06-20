@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meta Quest Mods</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Explore and download various mods for Meta Quest. Join our Discord community for more updates and support.">
-  <meta name="keywords" content="Meta Quest, VR Mods, Download Mods, Virtual Reality">
-  <meta property="og:title" content="Meta Quest Mods">
-  <meta property="og:description" content="Explore and download various mods for Meta Quest. Join our Discord community for more updates and support.">
-  <meta property="og:image" content="pics/sh.jpeg">
-  <meta property="og:url" content="https://byteusv1.github.io/byteus">
 </head>
 <body>
   <div id="particles-js"></div>
@@ -28,38 +22,43 @@
       </nav>
       <div class="search-bar-container">
         <input type="text" id="searchBar" placeholder="Search mods..." onkeyup="searchMods()">
+        <select id="filter" onchange="searchMods()">
+          <option value="all">All</option>
+          <option value="vip">VIP ELITE</option>
+          <option value="free">FREE</option>
+        </select>
       </div>
     </header>
     <main id="modsContainer">
-      <div class="service-item" onclick="location.href='mods/mod1.html';">
+      <div class="service-item" data-type="vip" onclick="location.href='mods/mod1.html';">
         <img src="pics/images.jpeg" alt="Download mod 1 - Population One VIP ELITE">
         <div class="info">Population One | VIP ELITE</div>
       </div>
-      <div class="service-item" onclick="location.href='mods/mod2.html';">
+      <div class="service-item" data-type="free" onclick="location.href='mods/mod2.html';">
         <img src="pics/download.jpeg" alt="Download mod 2 - Arizona Sunshine 2 FREE">
         <div class="info">Arizona Sunshine 2 | FREE</div>
       </div>
-      <div class="service-item" onclick="location.href='mods/mod3.html';">
+      <div class="service-item" data-type="free" onclick="location.href='mods/mod3.html';">
         <img src="pics/az1.jpeg" alt="Download mod 3 - Arizona Sunshine FREE">
-        <div class="info">Arizona Sunshine 1 | FREE</div>
+        <div class="info">Arizona Sunshine | FREE</div>
       </div>
-      <div class="service-item" onclick="location.href='mods/mod4.html';">
+      <div class="service-item" data-type="free" onclick="location.href='mods/mod4.html';">
         <img src="pics/sportmode.jpeg" alt="Download mod 4 - Sport Mode FREE">
         <div class="info">Sport Mode | FREE</div>
       </div>
-      <div class="service-item" onclick="location.href='mods/mod5.html';">
+      <div class="service-item" data-type="free" onclick="location.href='mods/mod5.html';">
         <img src="pics/wmg.jpeg" alt="Download mod 5 - Walkabout Mini Golf FREE">
         <div class="info">Walkabout Mini Golf | FREE</div>
       </div>
-      <div class="service-item" onclick="location.href='mods/mod6.html';">
+      <div class="service-item" data-type="free" onclick="location.href='mods/mod6.html';">
         <img src="pics/fn.jpeg" alt="Download mod 6 - Fruit Ninja FREE">
         <div class="info">Fruit Ninja | FREE</div>
       </div>
-      <div class="service-item" onclick="location.href='mods/mod7.html';">
+      <div class="service-item" data-type="free" onclick="location.href='mods/mod7.html';">
         <img src="pics/nmr.jpeg" alt="Download mod 7 - No More Rainbows FREE">
         <div class="info">No More Rainbows | FREE</div>
       </div>
-      <div class="service-item" onclick="location.href='mods/mod8.html';">
+      <div class="service-item" data-type="free" onclick="location.href='mods/mod8.html';">
         <img src="pics/sh.jpeg" alt="Download mod 8 - SuperHot FREE">
         <div class="info">SuperHot | FREE</div>
       </div>
@@ -67,5 +66,26 @@
   </div>
   <script src="particles.js" defer></script>
   <script src="app.js" defer></script>
+  <script>
+    function searchMods() {
+      const input = document.getElementById('searchBar').value.toLowerCase();
+      const filter = document.getElementById('filter').value;
+      const serviceItems = document.getElementsByClassName('service-item');
+
+      for (let i = 0; i < serviceItems.length; i++) {
+        const info = serviceItems[i].getElementsByClassName('info')[0];
+        const type = serviceItems[i].getAttribute('data-type');
+
+        const matchesSearch = info.innerText.toLowerCase().includes(input);
+        const matchesFilter = (filter === 'all') || (filter === type);
+
+        if (matchesSearch && matchesFilter) {
+          serviceItems[i].style.display = '';
+        } else {
+          serviceItems[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
 </body>
 </html>
