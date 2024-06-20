@@ -82,9 +82,10 @@ nav ul li a:focus {
   margin: 20px 0; /* Add vertical margin */
 }
 
-#searchBar {
-  width: 300px; /* Width of the search bar */
-  padding: 10px;
+#searchBar, #filter {
+  width: 200px;
+  padding: 8px;
+  margin: 10px;
   border: 2px solid #ffffff; /* White border */
   border-radius: 10px; /* Rounded corners */
   background-color: #000; /* Black background */
