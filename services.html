@@ -75,14 +75,16 @@
     for (let i = 0; i < serviceItems.length; i++) {
       const info = serviceItems[i].getElementsByClassName('info')[0];
       const type = serviceItems[i].getAttribute('data-type');
+      const isVisible = info.innerText.toLowerCase().includes(input);
 
-      const matchesSearch = info.innerText.toLowerCase().includes(input);
-      const matchesFilter = (filter === 'all') || (filter === type);
-
-      if (matchesSearch && matchesFilter) {
-        serviceItems[i].style.display = 'inline-block'; // Show the item
+      if (filter === 'all' || type === filter) {
+        if (isVisible) {
+          serviceItems[i].style.display = 'inline-block'; // Show the item
+        } else {
+          serviceItems[i].style.display = 'none'; // Hide the item if it doesn't match the search
+        }
       } else {
-        serviceItems[i].style.display = 'none'; // Hide the item
+        serviceItems[i].style.display = 'none'; // Hide the item if it doesn't match the filter
       }
     }
   }
