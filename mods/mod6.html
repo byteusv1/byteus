@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Walkabout Mini Golf Mod</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #000000; /* Black background */
+			color: #ffffff; /* White text */
+			position: relative;
+		}
+		
+		.container {
+			max-width: 800px;
+			margin: 40px auto;
+			padding: 20px;
+			background-color: #000000; /* Black container */
+			border: 5px solid #39ff14;
+			border-radius: 10px;
+			box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+			text-align: center; /* Center container content */
+			position: relative;
+			z-index: 1;
+		}
+		
+		#particles-js {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			border-radius: 10px; /* Match the container's border radius */
+		}
+		
+		.info {
+			margin-bottom: 20px;
+			position: relative;
+			z-index: 2; /* Ensure content is above particles */
+		}
+		
+		.info h2 {
+			margin-top: 0;
+		}
+		
+		.download-button {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			text-decoration: none;
+			transition: background-color 0.3s;
+			position: relative;
+			z-index: 2; /* Ensure button is above particles */
+		}
+		
+		.download-button:hover {
+			background-color: #3e8e41;
+		}
+		
+		.video-iframe {
+			margin: 20px auto; /* Center the iframe */
+			border: none;
+			display: block; /* Needed to center the iframe */
+			position: relative;
+			z-index: 2; /* Ensure iframe is above particles */
+		}
+		
+		.download-link {
+			display: none;
+		}
+		
+		.download-button-container {
+			margin-top: 20px;
+			position: relative;
+			z-index: 2; /* Ensure button container is above particles */
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="particles-js"></div>
+		<div class="info">
+			<h2>Walkabout Mini Golf | FREE</h2>
+			<p>Video Title: No Video</p>
+			<br>
+			<p>Mods: All Levels Unlocked, No Lazer Death, Unlimited Strokes</p>
+		</div>
+		
+		<div class="download-button-container">
+			<a href="https://www.mediafire.com/file/ioqzfy8t2trixck/Walkabout_Minigolf-ByteUs_Mod.apk/file" class="download-button" target="_blank">Download</a>
+		</div>
+		
+		<iframe class="video-iframe" width="640" height="480" src="https://www.youtube.com/embed/blank" frameborder="0" allowfullscreen></iframe>
+		
+		<a class="download-link" href="#" id="download-link">Download</a>
+	</div>
 
+	<script src="particles.js" defer></script>
+  <script src="app.js" defer></script>
+	
+</body>
+</html>
