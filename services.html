@@ -67,25 +67,26 @@
   <script src="particles.js" defer></script>
   <script src="app.js" defer></script>
   <script>
-    function searchMods() {
-      const input = document.getElementById('searchBar').value.toLowerCase();
-      const filter = document.getElementById('filter').value;
-      const serviceItems = document.getElementsByClassName('service-item');
+  function searchMods() {
+    const input = document.getElementById('searchBar').value.toLowerCase();
+    const filter = document.getElementById('filter').value;
+    const serviceItems = document.getElementsByClassName('service-item');
 
-      for (let i = 0; i < serviceItems.length; i++) {
-        const info = serviceItems[i].getElementsByClassName('info')[0];
-        const type = serviceItems[i].getAttribute('data-type');
+    for (let i = 0; i < serviceItems.length; i++) {
+      const info = serviceItems[i].getElementsByClassName('info')[0];
+      const type = serviceItems[i].getAttribute('data-type');
 
-        const matchesSearch = info.innerText.toLowerCase().includes(input);
-        const matchesFilter = (filter === 'all') || (filter === type);
+      const matchesSearch = info.innerText.toLowerCase().includes(input);
+      const matchesFilter = (filter === 'all') || (filter === type);
 
-        if (matchesSearch && matchesFilter) {
-          serviceItems[i].style.display = '';
-        } else {
-          serviceItems[i].style.display = 'none';
-        }
+      if (matchesSearch && matchesFilter) {
+        serviceItems[i].style.display = 'inline-block'; // Show the item
+      } else {
+        serviceItems[i].style.display = 'none'; // Hide the item
       }
     }
-  </script>
+  }
+</script>
+
 </body>
 </html>
