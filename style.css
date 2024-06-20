@@ -6,7 +6,6 @@ body {
   font-family: 'Neon Tubes', Arial, sans-serif;
   background-color: #000; /* Black background */
   color: #00ff66; /* Neon green text color */
-  overflow: hidden; /* Added to prevent scrollbars */
 }
 
 #particles-js {
@@ -74,23 +73,20 @@ nav ul li a:hover {
   text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #39ff14; /* Neon glow effect on hover */
 }
 
+nav ul li a:focus {
+  outline: 2px solid #39ff14; /* Focus outline for accessibility */
+}
+
 main {
   text-align: center;
   margin-top: 150px; /* Adjust the margin-top value as needed */
 }
 
-h2 {
+h2, p {
   color: #ffffff; /* White text color */
   text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff; /* Neon white glow */
 }
 
-p {
-  font-size: 18px;
-  color: #ffffff; /* White text color */
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff; /* Neon white glow */
-}
-
-/* Neon Box Styling */
 .neon-box {
   background-color: rgba(0, 0, 0, 1.0); /* Black background */
   border: 2px solid #ffffff; /* White border */
@@ -101,17 +97,6 @@ p {
   max-width: 600px; /* Adjust as needed */
 }
 
-/* Neon Box Nav Styling */
-.neon-box-nav {
-  background-color: rgba(0, 0, 0, 0.2); /* Black background with 20% opacity */
-  border: 2px solid #ffffff; /* White border */
-  border-radius: 10px; /* Rounded corners */
-  padding: 10px 20px;
-  margin: 10px auto 0; /* Center horizontally with top margin */
-  width: fit-content; /* Fit the content */
-}
-
-/* Additional styles for the services page */
 .service-item {
   display: inline-block;
   margin: 20px;
