@@ -109,3 +109,18 @@ document.addEventListener('DOMContentLoaded', () => {
         "retina_detect": true
     });
 });
+
+function searchMods() {
+  const input = document.getElementById('searchBar').value.toLowerCase();
+  const serviceItems = document.getElementsByClassName('service-item');
+
+  for (let i = 0; i < serviceItems.length; i++) {
+    const info = serviceItems[i].getElementsByClassName('info')[0];
+    if (info.innerText.toLowerCase().includes(input)) {
+      serviceItems[i].style.display = '';
+    } else {
+      serviceItems[i].style.display = 'none';
+    }
+  }
+}
+
